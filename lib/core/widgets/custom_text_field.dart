@@ -13,6 +13,7 @@ class CustomTextFormField extends StatelessWidget with ValidationMixin {
   final TextInputType? inputType;
   final StringCallBack? validator;
   final Widget? suffexIcon;
+  final Widget? hintText;
   final ValueSetter? onSaved;
   final ValueSetter? onChanged;
   final bool? obsecureText;
@@ -26,6 +27,7 @@ class CustomTextFormField extends StatelessWidget with ValidationMixin {
     this.focusNode,
     this.inputType,
     this.suffexIcon,
+    this.hintText,
     this.onSaved,
     this.validator,
     this.onChanged,
@@ -34,6 +36,7 @@ class CustomTextFormField extends StatelessWidget with ValidationMixin {
     this.enablePaste = true,
     this.maxLength,
   }) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return TextFormField(
